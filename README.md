@@ -1,4 +1,39 @@
 # P2P Chat App
+See https://grok.com/c/f274fcb7-6dc7-4830-9a33-1ba6d9cc0758 (ajwijat@ajayit.com)
+
+
+TODO check
+```
+@akera01 ➜ /workspaces/chat/p2p-chat-web (main) $ npx expo-doctor@latest
+Need to install the following packages:
+expo-doctor@1.17.8
+Ok to proceed? (y) y
+13/17 checks passed. 4 checks failed. Possible issues detected:
+Use the --verbose flag to see more details about passed checks.
+
+✖ Check for common project setup issues
+The .expo directory is not ignored by Git. It contains machine-specific device history and development server settings and should not be committed.
+Advice:
+Add ".expo/" to your .gitignore to avoid committing local Expo state.
+
+✖ Check for lock file
+Multiple lock files detected (yarn.lock, package-lock.json). This may result in unexpected behavior in CI environments, such as EAS Build, which infer the package manager from the lock file.
+Advice:
+Remove any lock files for package managers you are not using.
+
+✖ Check dependencies for packages that should not be installed directly
+The package "@expo/metro-config" should not be installed directly in your project. You should instead use "expo/metro-config" which is a sub-export of the expo package.
+Advice:
+Remove these packages from your package.json.
+
+✖ Validate packages against React Native Directory package metadata
+The following issues were found when validating your dependencies against React Native Directory:
+  Untested on New Architecture: react-native-webrtc
+Advice:
+Use libraries that are actively maintained and support the New Architecture. Find alternative libraries with https://reactnative.directory.
+Add packages to expo.doctor.reactNativeDirectoryCheck.exclude in package.json to selectively skip validations, if the warning is not relevant.
+
+```
 
 ## Project Overview
 This project is a minimal, peer-to-peer (P2P) chat application built with React Native, utilizing WebRTC for real-time communication (text chat via data channels, voice/video calls via media streams) and PeerJS for signaling. The app is designed to be blazing fast and responsive, with direct P2P connections to minimize latency. No backend server like Firebase is used—connections are established by manually sharing Peer IDs (e.g., via text or QR code in a production version).
