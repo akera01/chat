@@ -1,8 +1,0 @@
-{
-  "expo": {
-    "name": "p2p-chat-web",
-    "slug": "p2p-chat-web",
-    "platforms": ["web"],
-    "web": {}
-  }
-}
